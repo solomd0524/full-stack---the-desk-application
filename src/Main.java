@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        /*System.out.println("Hello World!");*/
+        System.out.println("Hello World");
         System.out.println("\n**************************************\n");
         System.out.println("\tWelcome to TheDesk \n");
         System.out.println("**************************************");
@@ -21,7 +21,7 @@ public class Main {
         };
         int[] arr1 = {1,2,3,4,5,6};
         int  slen = arr1.length;
-        for(int i=0; i<slen;i++){
+        for (int i = 0; i < slen; i++) {
             System.out.println(arr[i]);
             // display the all the Strings mentioned in the String array
         }
