@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Main {
@@ -22,7 +23,7 @@ public class Main {
         int[] arr1 = {1,2,3,4,5,6};
         int  slen = arr1.length;
         for (int i = 0; i < slen; i++) {
-            System.out.println(arr[i]);
+            System.out.println("arr1 = " + arr[i]);
             // display the all the Strings mentioned in the String array
         }
         ArrayList<Integer> arrlist = new ArrayList<Integer>();
@@ -36,6 +37,7 @@ public class Main {
         System.out.println("\nEnter your choice:\t");
         Scanner sc = new Scanner(System.in);
         int  options =  sc.nextInt();
+        System.out.println("options = " + options);
         for(int j=1;j<=slen;j++){
             if(options==j){
                 switch (options){
@@ -89,12 +91,31 @@ public class Main {
         System.out.println("Closing your application... \nThank you!");
             }
     private static void searchExpenses(ArrayList<Integer> arrayList) {
-        int leng = arrayList.size();
+
+        int arraySize = arrayList.size();
+
         System.out.println("Enter the expense you need to search:\t");
-        //Complete the method
+        Scanner sc = new Scanner(System.in);
+        int expenditureToSearchFor = sc.nextInt();
+        boolean doesExist = false;
+
+        for (int i = 0; i < arraySize; i++) {
+            int index = arrayList.indexOf(arrayList.get(i));
+            if (index == 0) {
+                doesExist = true;
+            }
+        }
+
+        if (doesExist) {
+            System.out.println(expenditureToSearchFor + " does exist in the expenditure list\n");
+        } else {
+            System.out.println(expenditureToSearchFor + " does not exist in the expenditure list\n");
+        }
     }
+
     private static void sortExpenses(ArrayList<Integer> arrayList) {
-        int arrlength =  arrayList.size();
-       //Complete the method. The expenses should be sorted in ascending order.
+        System.out.println("arrayList = " + arrayList);
+        Collections.sort(arrayList);
+        System.out.println("arrayList after sort = " + arrayList);
     }
 }
