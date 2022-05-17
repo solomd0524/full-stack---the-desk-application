@@ -94,15 +94,15 @@ public class Main {
 
         int arraySize = arrayList.size();
 
-        System.out.println("Enter the expense you need to search:\t");
+        System.out.println("Enter the expense to search:\t");
         Scanner sc = new Scanner(System.in);
         int expenditureToSearchFor = sc.nextInt();
-        boolean doesExist = false;
+        boolean doesExist = true;
 
         for (int i = 0; i < arraySize; i++) {
-            int index = arrayList.indexOf(arrayList.get(i));
-            if (index == 0) {
-                doesExist = true;
+            int index = arrayList.indexOf(expenditureToSearchFor);
+            if (index == -1) {
+                doesExist = false;
             }
         }
 
